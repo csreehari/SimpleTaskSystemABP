@@ -1,4 +1,5 @@
-﻿using SimpleTaskSystem.Dtos;
+﻿using Abp.Application.Services;
+using SimpleTaskSystem.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimpleTaskSystem.Services
 {
-    interface IProjectsAppService
+    public interface IProjectAppService : IApplicationService
     {
         GetProjectOutput GetProjects();
     }

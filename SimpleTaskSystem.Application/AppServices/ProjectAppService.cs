@@ -10,20 +10,21 @@ using Abp.Application.Services;
 
 namespace SimpleTaskSystem.AppServices
 {
-    public class ProjectsAppService : ApplicationService, IProjectsAppService
+    public class ProjectAppService : ApplicationService, IProjectAppService
     {
-        private IProjectRepository _projectRepository;
-        public ProjectsAppService(IProjectRepository projectRepository)
+        private IProjectRepository _projectRepository { get; set; }
+
+        public ProjectAppService(IProjectRepository projectRepository)
         {
             _projectRepository = projectRepository;
         }
+
         public GetProjectOutput GetProjects()
         {
             var projects = _projectRepository.GetProjects();
             return new GetProjectOutput
             {
                 Projects = Mapper.Map<List<ProjectDto>>(projects)
-
             };
         }
     }

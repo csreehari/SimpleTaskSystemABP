@@ -4,6 +4,7 @@ using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.WebApi;
 using SimpleTaskSystem.Services;
+using Abp.Web;
 
 namespace SimpleTaskSystem
 {
@@ -16,6 +17,7 @@ namespace SimpleTaskSystem
 
             Configuration.Modules.AbpWebApi().DynamicApiControllerBuilder
                 .ForAll<IApplicationService>(typeof(SimpleTaskSystemApplicationModule).Assembly, "smps")
+                .WithConventionalVerbs()
                 .Build();
         }
     }
