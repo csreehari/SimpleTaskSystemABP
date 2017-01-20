@@ -1,0 +1,41 @@
+﻿
+
+<div id="bodyContainer"   ng-controller="app.views.seekers as vm">
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="form-group">
+                    <legend>Seekers List</legend>
+                    <br />
+                    <br />
+                    <br />
+                    <table class="table-bordered">
+                        <tr>
+                            <th>Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Address</th>
+                            <th colspan="2"></th>
+                        </tr>
+                        <tr ng-repeat="seeker in seekers">
+                            <td>{{seeker.userId}}</td>
+                            <td>{{seeker.firstName}}</td>
+                            <td>{{seeker.lastName}}</td>
+                            <td>{{seeker.Address}}</td>
+                            <td>
+                                <button class="btn btn-info btn-sm" ng-click="editseekerDetails(seeker, $index)">
+                                    Edit
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" ng-click="removeFromList($index)">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
