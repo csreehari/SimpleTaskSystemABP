@@ -94,12 +94,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppServices\ProjectsAppService.cs" />
+    <Compile Include="AppServices\ProjectAppService.cs" />
     <Compile Include="AppServices\UserAppService.cs" />
     <Compile Include="Dtos\HolderDto.cs" />
     <Compile Include="Dtos\ProjectDto.cs" />
     <Compile Include="Dtos\SeekerDto.cs" />
-    <Compile Include="Services\IProjectsAppService.cs" />
+    <Compile Include="Services\IProjectAppService.cs" />
     <Compile Include="Services\IUserAppService.cs" />
     <Compile Include="SimpleTaskSystemApplicationModule.cs" />
     <Compile Include="SimpleTaskSystemAppServiceBase.cs" />
